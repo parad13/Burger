@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: burger-app
+  labels:
+    app: burger-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: burger-app
+  template:
+    metadata:
+      labels:
+        app: burger-app
+    spec:
+      containers:
+      - name: burger-app
+        image: burger-app:latest
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+          requests:
+            cpu: "200m"
+            memory: "256Mi"

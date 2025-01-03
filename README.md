@@ -82,6 +82,22 @@ docker-compose up --build
 
 ---
 
+---
+
+### **7. Build and Run the Application Using Docker & Kubernates**
+Build and start the application with Docker & Kubernates:
+
+```bash
+1. docker build -t burger-app:latest .
+2. kubectl apply -f k8s/deployment.ya
+3. kubectl apply -f k8s/service.yaml
+4. kubectl get pods
+5. kubectl get services
+6. kubectl apply -f k8s/hpa.yaml
+```
+
+---
+
 ### **Additional Notes**
 
 - **Ensure Docker is Installed:**
